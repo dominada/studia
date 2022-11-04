@@ -1,0 +1,62 @@
+V "GNAT Lib v2021"
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_CALENDAR
+RV NO_DELAY
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTIONS
+RV NO_FIXED_POINT
+RV NO_FLOATING_POINT
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV NO_OBSOLESCENT_FEATURES
+
+U randompackage%b	randompackage.adb	0b03ceb8 OO PK
+
+U randompackage%s	randompackage.ads	a153de8a EE NE OO PK
+W calendar%s		calendar.ads		calendar.ali
+
+D ada.ads		20210520051132 76789da1 ada%s
+D a-calend.ads		20210520051128 474d9720 ada.calendar%s
+D a-unccon.ads		20210520051130 0e9b276f ada.unchecked_conversion%s
+D calendar.ads		20210520051132 2cb525cd calendar%s
+D randompackage.ads	20221017180238 8de6fb47 randompackage%s
+D randompackage.adb	20221017180236 86e535ff randompackage%b
+D system.ads		20210520051136 2ffa5114 system%s
+D s-exctab.ads		20210520051132 54135002 system.exception_table%s
+D s-stalib.ads		20210520051134 472fbca8 system.standard_library%s
+G a e
+G c Z s b [setseed randompackage 9 13 none]
+G c Z s b [unitrandom randompackage 10 13 none]
+G c Z s b [randomint randompackage 12 13 none]
+X 2 a-calend.ads
+42I9*Time<226I9>
+54O12*Day_Duration{duration}
+56V13*Clock{42I9} 6|44s39
+67V13*Seconds{54O12} 6|44s31
+226I9 Time_Rep<long_long_integer>
+X 4 calendar.ads
+18K9*Calendar=18:30 5|5w6 5r20
+X 5 randompackage.ads
+7K9*RandomPackage 15l5 15e18 6|6b14 46l5 46t18
+9U13*SetSeed 9>22 6|14b13 17l7 17t14
+9i22 N{positive} 6|14b21 16r22
+10V13*UnitRandom{float} 6|19b12 32l7 32t17 37s30
+12V13*RandomInt{positive} 12>24 6|34b12 41l7 41t16
+12i24 N{positive} 6|34b22 35r30 37r27
+X 6 randompackage.adb
+8N3 modulus 11r44 24r43 25r31 29r60 30r33 44r51
+9I8 int_16<short_integer> 11r25 29r13 44r17
+10I8 int_32<integer> 29r32 44r24
+11I11 seed_range{9I8} 12r24 16r11
+12i3 seed{11I11} 16m5 24m5 24r23 25r19 29m7 29r39 30r21 45m3
+12i9 default_seed{11I11} 44m3 45r9
+20N5 multiplier 24r12 29r21
+21N5 increment 24r28 29r45
+22f5 result{float} 25m5 26r12 30m7 31r14
+35i5 result{integer} 37m5 38r12
+
