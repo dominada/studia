@@ -11,7 +11,7 @@
 //Rekurencyjnie
 int rekure(int n)
 {
-	
+
 	if(n<3)
 	{
 		return 1;
@@ -60,6 +60,7 @@ int rekure(int n)
    
    
    plik.close();
+   	
    	cin >> n;
    return 0;
   }
